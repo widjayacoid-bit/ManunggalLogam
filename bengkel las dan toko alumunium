@@ -3,276 +3,689 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bengkel Manunggal Logam | Spesialis Besi, Baja, & Aluminium</title>
+    <title>CV. Manunggal Logam - Bengkel Las Besi, Baja & Spesialis Aluminium Tangsel</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Plus Jakarta Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                    },
                     colors: {
-                        industrial: {
-                            dark: '#0f172a',
-                            card: '#1e293b',
-                            accent: '#f59e0b', // Amber/Welding spark accent
+                        brand: {
+                            50: '#fdf8f6',
+                            100: '#fbe8e1',
+                            500: '#b45309', // Warm Bronze / Amber
+                            600: '#92400e',
+                            700: '#78350f',
+                            900: '#451a03',
+                        },
+                        stone: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                            800: '#292524',
+                            900: '#1c1917',
                         }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
+    <!-- Google Fonts Inter & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-pattern {
+            background-image: radial-gradient(rgba(180, 83, 9, 0.08) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-slate-950">
+<body class="bg-stone-50 text-stone-900 antialiased selection:bg-brand-500 selection:text-white">
 
-    <!-- NAVBAR -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-2">
-                <div class="bg-amber-500 text-slate-950 p-2 rounded-lg font-extrabold text-xl">
-                    <i class="fa-solid fa-fire-flame-curved"></i>
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200 transition-all duration-300 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-500 to-amber-700 flex items-center justify-center shadow-lg shadow-brand-500/20 group-hover:scale-105 transition">
+                        <i class="fa-solid fa-hammer text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-lg font-bold tracking-tight text-stone-900 block">MANUNGGAL LOGAM</span>
+                        <span class="text-xs text-brand-600 font-semibold tracking-widest uppercase">Las & Aluminium Specialist</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8 font-medium text-sm text-stone-600">
+                    <a href="#beranda" class="hover:text-brand-600 transition">Beranda</a>
+                    <a href="#layanan" class="hover:text-brand-600 transition">Layanan</a>
+                    <a href="#kalkulator" class="hover:text-brand-600 transition">Estimator Harga</a>
+                    <a href="#galeri" class="hover:text-brand-600 transition">Portofolio</a>
+                    <a href="#tentang" class="hover:text-brand-600 transition">Tentang Kami</a>
+                    <a href="#kontak" class="hover:text-brand-600 transition">Kontak</a>
                 </div>
-                <span class="text-xl font-extrabold tracking-tight">MANUNGGAL<span class="text-amber-500">LOGAM</span></span>
-            </a>
-            <div class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-300">
-                <a href="#home" class="hover:text-amber-500 transition">Beranda</a>
-                <a href="#about" class="hover:text-amber-500 transition">Tentang Kami</a>
-                <a href="#services" class="hover:text-amber-500 transition">Layanan</a>
-                <a href="#contact" class="hover:text-amber-500 transition">Kontak</a>
+
+                <!-- CTA WhatsApp Header -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <a href="https://wa.me/6287808813777?text=Halo%20CV.%20Manunggal%20Logam,%20saya%20ingin%20konsultasi%20pembuatan..." target="_blank" 
+                       class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition shadow-lg shadow-emerald-600/20">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>0878-0881-3777</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-stone-700 hover:text-stone-900 p-2 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
             </div>
-            <div>
-                <a href="https://wa.me/6287808813777" target="_blank" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-5 py-2.5 rounded-full text-sm transition shadow-lg shadow-amber-500/20 flex items-center gap-2">
-                    <i class="fa-brands fa-whatsapp text-lg"></i> Hubungi Kami
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-stone-200 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="#beranda" class="block py-2 text-stone-700 hover:text-brand-600 font-medium">Beranda</a>
+            <a href="#layanan" class="block py-2 text-stone-700 hover:text-brand-600 font-medium">Layanan</a>
+            <a href="#kalkulator" class="block py-2 text-stone-700 hover:text-brand-600 font-medium">Estimator Harga</a>
+            <a href="#galeri" class="block py-2 text-stone-700 hover:text-brand-600 font-medium">Portofolio</a>
+            <a href="#tentang" class="block py-2 text-stone-700 hover:text-brand-600 font-medium">Tentang Kami</a>
+            <a href="#kontak" class="block py-2 text-stone-700 hover:text-brand-600 font-medium">Kontak</a>
+            <div class="pt-2">
+                <a href="https://wa.me/6287808813777?text=Halo%20CV.%20Manunggal%20Logam,%20saya%20ingin%20konsultasi%20pembuatan..." target="_blank" 
+                   class="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-3 rounded-xl font-semibold text-sm transition">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Chat WhatsApp (0878-0881-3777)</span>
                 </a>
             </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section id="home" class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden border-b border-slate-800">
-        <!-- Background Glow -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-500/10 blur-[120px] rounded-full pointer-events-none"></div>
-        
+    <!-- Hero Section -->
+    <section id="beranda" class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden hero-pattern">
+        <div class="absolute inset-0 bg-gradient-to-b from-stone-100/50 via-stone-50/80 to-stone-50 pointer-events-none"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-3xl mx-auto">
-                <span class="inline-flex items-center gap-1.5 py-1.5 px-4 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-6">
-                    <i class="fa-solid fa-award"></i> Spesialis Besi, Baja, & Aluminium Berkualitas Tinggi
-                </span>
-                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
-                    Solusi Estetik & Kokoh Untuk <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">Hunian & Gedung Anda</span>
-                </h1>
-                <p class="text-slate-400 text-base sm:text-lg mb-10 leading-relaxed">
-                    Selamat datang di <strong>Bengkel Manunggal Logam</strong>. Kami melayani pembuatan kanopi modern, pagar minimalis, tangga, mebel industrial, hingga kusen, pintu, jendela, dan partisi aluminium dengan hasil presisi dan bergaransi rapi.
-                </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="https://wa.me/6287808813777" target="_blank" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-8 py-4 rounded-xl transition shadow-xl shadow-amber-500/20 flex items-center justify-center gap-3 text-base">
-                        <i class="fa-brands fa-whatsapp text-xl"></i> Konsultasi Gratis Sekarang
-                    </a>
-                    <a href="#services" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 font-semibold px-8 py-4 rounded-xl transition flex items-center justify-center gap-2 text-base">
-                        Lihat Layanan Kami <i class="fa-solid fa-arrow-down text-xs"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="py-24 bg-slate-900/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-amber-500 font-bold tracking-wider text-sm uppercase mb-2">Tentang Bengkel Kami</h2>
-                    <h3 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-6">Bengkel Manunggal Logam: Keahlian Menyatukan Kekuatan Besi & Keindahan Aluminium</h3>
-                    <p class="text-slate-400 leading-relaxed mb-6">
-                        Kami adalah bengkel profesional yang berfokus pada pengerjaan konstruksi besi, baja, serta instalasi aluminium di Tangerang Selatan. Dengan pengalaman bertahun-tahun, kami siap mewujudkan berbagai desain impian Anda—baik gaya industrial modern, minimalis kontemporer, hingga klasik.
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-700 text-xs font-semibold tracking-wide uppercase">
+                        <span class="w-2 h-2 rounded-full bg-brand-600 animate-pulse"></span>
+                        Spesialis Pengelasan & Konstruksi Baja Modern
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-stone-900 leading-tight">
+                        Wujudkan Hunian Impian dengan <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-amber-700">Konstruksi Baja & Aluminium Premium</span>
+                    </h1>
+                    <p class="text-base sm:text-lg text-stone-600 max-w-2xl mx-auto lg:mx-0">
+                        Ahli pembuatan kanopi aesthetic, pagar minimalis modern, railing tangga, mebel industrial, hingga kusen & partisi aluminium berkualitas tinggi di Tangerang Selatan & sekitarnya.
                     </p>
-                    <div class="grid grid-cols-2 gap-6 pt-4 border-t border-slate-800">
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="https://wa.me/6287808813777?text=Halo,%20saya%20ingin%20konsultasi%20pembuatan%20kanopi/pagar..." target="_blank"
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-brand-600 to-amber-700 hover:from-brand-700 hover:to-amber-800 text-white font-bold px-8 py-4 rounded-xl shadow-xl shadow-brand-600/20 transition transform hover:-translate-y-0.5">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>Konsultasi & Survey Gratis</span>
+                        </a>
+                        <a href="#kalkulator" 
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-stone-100 text-stone-800 font-semibold px-8 py-4 rounded-xl border border-stone-300 shadow-sm transition">
+                            <i class="fa-solid fa-calculator text-brand-600"></i>
+                            <span>Hitung Estimasi Biaya</span>
+                        </a>
+                    </div>
+                    <!-- Trust Badges -->
+                    <div class="pt-8 border-t border-stone-200 grid grid-cols-3 gap-4 text-left">
                         <div>
-                            <span class="block text-3xl font-extrabold text-amber-500 mb-1">100%</span>
-                            <span class="text-sm text-slate-400 font-medium">Material Berkualitas Tinggi</span>
+                            <p class="text-2xl font-bold text-stone-900">10+ Tahun</p>
+                            <p class="text-xs text-stone-500">Pengalaman Profesional</p>
                         </div>
                         <div>
-                            <span class="block text-3xl font-extrabold text-amber-500 mb-1">Rapi & Presisi</span>
-                            <span class="text-sm text-slate-400 font-medium">Dikerjakan Tenaga Ahli</span>
+                            <p class="text-2xl font-bold text-stone-900">100%</p>
+                            <p class="text-xs text-stone-500">Garansi Kualitas Las</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-stone-900">Gratis</p>
+                            <p class="text-xs text-stone-500">Survey & Konsultasi</p>
                         </div>
                     </div>
                 </div>
-                <div class="bg-slate-900 p-8 rounded-3xl border border-slate-800 relative">
-                    <div class="absolute -top-4 -right-4 bg-amber-500 text-slate-950 font-bold px-4 py-2 rounded-xl text-sm shadow-lg">
-                        Terpercaya & Bergaransi
+
+                <!-- Hero Showcase Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-1.5 bg-gradient-to-r from-brand-500 to-amber-700 rounded-3xl blur-xl opacity-20 animate-pulse"></div>
+                        <div class="relative bg-white border border-stone-200 rounded-2xl p-6 shadow-2xl space-y-6">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-semibold text-brand-600 uppercase tracking-wider">Proyek Unggulan</span>
+                                <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs rounded-full font-medium">Ready Order</span>
+                            </div>
+                            <div class="rounded-xl overflow-hidden aspect-video bg-stone-100 relative group">
+                                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Kanopi & Pagar Modern" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x400/e7e5e4/b45309?text=Kanopi+Modern'">
+                                <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent flex items-end p-4">
+                                    <div>
+                                        <h3 class="text-white font-semibold text-sm">Kanopi Kaca Tempered & Rangka Baja</h3>
+                                        <p class="text-xs text-stone-300">Pondok Aren, Tangerang Selatan</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="flex items-center gap-3 text-sm text-stone-700">
+                                    <div class="w-8 h-8 rounded-lg bg-brand-500/10 flex items-center justify-center text-brand-600">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                    <span>Material Besi & Baja Berkualitas SNI</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-stone-700">
+                                    <div class="w-8 h-8 rounded-lg bg-brand-500/10 flex items-center justify-center text-brand-600">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                    <span>Finishing Cat Anti Karat / Duco Rapih</span>
+                                </div>
+                            </div>
+                            <a href="#layanan" class="w-full block text-center bg-stone-100 hover:bg-stone-200 text-stone-800 font-medium py-3 rounded-xl text-sm transition">
+                                Lihat Semua Layanan Kami &rarr;
+                            </a>
+                        </div>
                     </div>
-                    <h4 class="text-xl font-bold mb-4 flex items-center gap-3">
-                        <i class="fa-solid fa-circle-check text-amber-500"></i> Kenapa Memilih Kami?
-                    </h4>
-                    <ul class="space-y-4 text-slate-300">
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-amber-500 mt-1"></i>
-                            <span>Desain fleksibel dan dapat disesuaikan (custom) dengan konsep bangunan Anda.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-amber-500 mt-1"></i>
-                            <span>Menggunakan bahan baku besi/baja tebal serta profil aluminium pilihan tahan karat.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-amber-500 mt-1"></i>
-                            <span>Harga kompetitif, transparan, dan transaksional tanpa biaya tersembunyi.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-amber-500 mt-1"></i>
-                            <span>Pelayanan ramah, survei lokasi, dan konsultasi gratis langsung ke tempat Anda.</span>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES SECTION -->
-    <section id="services" class="py-24">
+    <!-- Layanan Section -->
+    <section id="layanan" class="py-20 bg-white border-t border-stone-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-amber-500 font-bold tracking-wider text-sm uppercase mb-2">Layanan Kami</h2>
-                <h3 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Produk & Jasa Unggulan</h3>
-                <p class="text-slate-400 mt-3">Berbagai macam kebutuhan pengelasan besi/baja serta pengerjaan aluminium siap kami kerjakan.</p>
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-semibold text-xs uppercase tracking-widest bg-brand-500/10 px-3 py-1 rounded-full">Layanan Profesional Kami</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 mt-4 mb-4">Solusi Lengkap Besi, Baja & Aluminium</h2>
+                <p class="text-stone-600 text-base">Kami melayani fabrikasi dan pemasangan kustom sesuai desain estetika arsitektur rumah, ruko, maupun gedung kantor Anda.</p>
             </div>
 
+            <!-- Services Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-amber-500/50 transition group">
-                    <div class="w-14 h-14 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
-                        <i class="fa-solid fa-house-chimney"></i>
+                <div class="bg-stone-50 border border-stone-200/80 rounded-2xl p-6 hover:border-brand-500/50 hover:shadow-xl transition group">
+                    <div class="w-14 h-14 rounded-xl bg-brand-500/10 flex items-center justify-center text-brand-600 text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-warehouse"></i>
                     </div>
-                    <h4 class="text-xl font-bold mb-3">Kanopi Modern</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed">Pembuatan kanopi kaca, alderon, spandek, solarlite dengan rangka besi hollow minimalis atau baja ringan yang kuat.</p>
+                    <h3 class="text-xl font-bold text-stone-900 mb-2">Kanopi Minimalis & Kaca</h3>
+                    <p class="text-stone-600 text-sm mb-4">Kanopi baja ringan, besi hollow, spandek, alderon, solarflat, hingga kanopi kaca tempered mewah tahan cuaca.</p>
+                    <ul class="space-y-2 text-xs text-stone-600 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Rangka kokoh anti rayap & karat</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Model estetik modern kontemporer</li>
+                    </ul>
+                    <a href="https://wa.me/6287808813777?text=Halo,%20saya%20tertarik%20dengan%20pembuatan%20Kanopi" target="_blank" class="inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-semibold text-sm">
+                        <span>Pesan / Konsultasi</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
                 </div>
 
                 <!-- Service 2 -->
-                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-amber-500/50 transition group">
-                    <div class="w-14 h-14 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
-                        <i class="fa-solid fa-bars"></i>
+                <div class="bg-stone-50 border border-stone-200/80 rounded-2xl p-6 hover:border-brand-500/50 hover:shadow-xl transition group">
+                    <div class="w-14 h-14 rounded-xl bg-brand-500/10 flex items-center justify-center text-brand-600 text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-bars-staggered"></i>
                     </div>
-                    <h4 class="text-xl font-bold mb-3">Pagar & Palingan</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed">Pagar minimalis, laser cutting, pagar kayu plat besi, railing balkon, dan tralis jendela yang aman sekaligus estetik.</p>
+                    <h3 class="text-xl font-bold text-stone-900 mb-2">Pagar & Pintu Gerbang</h3>
+                    <p class="text-stone-600 text-sm mb-4">Pagar minimalis cutting laser CNC, hollow galvanis, kayu komposit WPC, pintu dorong otomatis, dan tralis jendela.</p>
+                    <ul class="space-y-2 text-xs text-stone-600 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Desain custom sesuai fasad rumah</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Finishing cat duco / oven rapih</li>
+                    </ul>
+                    <a href="https://wa.me/6287808813777?text=Halo,%20saya%20tertarik%20dengan%20pembuatan%20Pagar%20dan%20Gerbang" target="_blank" class="inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-semibold text-sm">
+                        <span>Pesan / Konsultasi</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
                 </div>
 
                 <!-- Service 3 -->
-                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-amber-500/50 transition group">
-                    <div class="w-14 h-14 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
+                <div class="bg-stone-50 border border-stone-200/80 rounded-2xl p-6 hover:border-brand-500/50 hover:shadow-xl transition group">
+                    <div class="w-14 h-14 rounded-xl bg-brand-500/10 flex items-center justify-center text-brand-600 text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition duration-300">
                         <i class="fa-solid fa-stairs"></i>
                     </div>
-                    <h4 class="text-xl font-bold mb-3">Tangga Besi & Baja</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed">Tangga lurus, tangga putar, tangga melayang (floating stairs) yang kokoh dipadukan dengan sentuhan modern.</p>
+                    <h3 class="text-xl font-bold text-stone-900 mb-2">Tangga & Railing</h3>
+                    <p class="text-stone-600 text-sm mb-4">Tangga putar, tangga melayang (floating stairs), railing balkon kaca, dan handrail tangga besi baja kokoh.</p>
+                    <ul class="space-y-2 text-xs text-stone-600 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Perhitungan struktur aman & presisi</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Tampilan modern & elegan</li>
+                    </ul>
+                    <a href="https://wa.me/6287808813777?text=Halo,%20saya%20tertarik%20dengan%20pembuatan%20Tangga%20dan%20Railing" target="_blank" class="inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-semibold text-sm">
+                        <span>Pesan / Konsultasi</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
                 </div>
 
                 <!-- Service 4 -->
-                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-amber-500/50 transition group">
-                    <div class="w-14 h-14 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
-                        <i class="fa-solid fa-couch"></i>
+                <div class="bg-stone-50 border border-stone-200/80 rounded-2xl p-6 hover:border-brand-500/50 hover:shadow-xl transition group">
+                    <div class="w-14 h-14 rounded-xl bg-brand-500/10 flex items-center justify-center text-brand-600 text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-door-open"></i>
                     </div>
-                    <h4 class="text-xl font-bold mb-3">Mebel & Rak Industrial</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed">Meja, kursi, rak buku, dan partisi ruangan dengan gaya industrial memadukan rangka besi dan kayu pilihan.</p>
+                    <h3 class="text-xl font-bold text-stone-900 mb-2">Kusen, Pintu & Jendela Aluminium</h3>
+                    <p class="text-stone-600 text-sm mb-4">Spesialis kusen aluminium YKK, Alexindo, kaca mati, pintu swing/sliding aluminium, dan jendela kustom.</p>
+                    <ul class="space-y-2 text-xs text-stone-600 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Anti rayap, bebas muai susut</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Kedap suara & presisi tinggi</li>
+                    </ul>
+                    <a href="https://wa.me/6287808813777?text=Halo,%20saya%20tertarik%20dengan%20Kusen%20dan%20Pintu%20Aluminium" target="_blank" class="inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-semibold text-sm">
+                        <span>Pesan / Konsultasi</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
                 </div>
 
                 <!-- Service 5 -->
-                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-amber-500/50 transition group">
-                    <div class="w-14 h-14 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
-                        <i class="fa-solid fa-door-open"></i>
+                <div class="bg-stone-50 border border-stone-200/80 rounded-2xl p-6 hover:border-brand-500/50 hover:shadow-xl transition group">
+                    <div class="w-14 h-14 rounded-xl bg-brand-500/10 flex items-center justify-center text-brand-600 text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-columns"></i>
                     </div>
-                    <h4 class="text-xl font-bold mb-3">Pintu & Kusen Aluminium</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed">Pembuatan kusen pintu & jendela aluminium (YKK, Alexindo, dll), pintu lipat, pintu geser (sliding), dan swing door.</p>
+                    <h3 class="text-xl font-bold text-stone-900 mb-2">Partisi Kaca & ACP</h3>
+                    <p class="text-stone-600 text-sm mb-4">Partisi ruangan kaca tempered, kaca frameless kantor, fasad Aluminum Composite Panel (ACP) ruko & gedung.</p>
+                    <ul class="space-y-2 text-xs text-stone-600 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Tampilan bersih & profesional</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Tahan cuaca ekstrem</li>
+                    </ul>
+                    <a href="https://wa.me/6287808813777?text=Halo,%20saya%20tertarik%20dengan%20Partisi%20Kaca%20dan%20ACP" target="_blank" class="inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-semibold text-sm">
+                        <span>Pesan / Konsultasi</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
                 </div>
 
                 <!-- Service 6 -->
-                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-amber-500/50 transition group">
-                    <div class="w-14 h-14 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
-                        <i class="fa-solid fa-window-maximize"></i>
+                <div class="bg-stone-50 border border-stone-200/80 rounded-2xl p-6 hover:border-brand-500/50 hover:shadow-xl transition group">
+                    <div class="w-14 h-14 rounded-xl bg-brand-500/10 flex items-center justify-center text-brand-600 text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-couch"></i>
                     </div>
-                    <h4 class="text-xl font-bold mb-3">Jendela & Partisi Kaca</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed">Jendela casement, jendela nako, serta partisi kaca tempered untuk kantor, ruko, maupun hunian modern.</p>
+                    <h3 class="text-xl font-bold text-stone-900 mb-2">Mebel Industrial Besi & Kayu</h3>
+                    <p class="text-stone-600 text-sm mb-4">Pembuatan meja kerja estetik, rak buku besi minimalis, kitchen set rangka besi, dan kitchen island gaya industrial.</p>
+                    <ul class="space-y-2 text-xs text-stone-600 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Desain custom sesuai interior</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Kombinasi besi hollow & kayu jati solid</li>
+                    </ul>
+                    <a href="https://wa.me/6287808813777?text=Halo,%20saya%20tertarik%20dengan%20Mebel%20Industrial" target="_blank" class="inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-semibold text-sm">
+                        <span>Pesan / Konsultasi</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT & LOCATION SECTION -->
-    <section id="contact" class="py-24 bg-slate-950 border-t border-slate-800">
+    <!-- Interactive Cost Estimator Section -->
+    <section id="kalkulator" class="py-20 bg-stone-100 relative border-t border-stone-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white border border-stone-200 rounded-3xl p-6 sm:p-10 shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-brand-500/5 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div class="text-center max-w-xl mx-auto mb-10">
+                    <span class="text-brand-600 font-semibold text-xs uppercase tracking-widest bg-brand-500/10 px-3 py-1 rounded-full">Simulasi Kilat</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 mt-3 mb-2">Kalkulator Estimasi Biaya</h2>
+                    <p class="text-stone-600 text-sm">Pilih jenis pekerjaan dan masukkan estimasi ukuran untuk mendapatkan kisaran harga proyek Anda.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <label class="block text-sm font-medium text-stone-700 mb-2">Pilih Layanan / Produk</label>
+                        <select id="calc-service" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:border-brand-600">
+                            <option value="kanopi" data-price="450000">Kanopi Minimalis (Atap Spandek)</option>
+                            <option value="kanopialderon" data-price="650000">Kanopi Alderon Double Layer</option>
+                            <option value="kanopicermin" data-price="1200000">Kanopi Kaca Tempered</option>
+                            <option value="pagar" data-price="550000">Pagar Minimalis / Cutting Laser</option>
+                            <option value="tangga" data-price="1500000">Tangga Putar / Besi (per meter tinggi)</option>
+                            <option value="kusen" data-price="250000">Kusen Aluminium (per meter lari)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-stone-700 mb-2">Estimasi Volume (m² atau m lari)</label>
+                        <input type="number" id="calc-volume" value="10" min="1" max="1000" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:border-brand-600">
+                    </div>
+                </div>
+
+                <div class="bg-stone-50 border border-stone-200 rounded-2xl p-6 mb-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div>
+                        <p class="text-xs text-stone-500 uppercase tracking-wider">Perkiraan Total Biaya</p>
+                        <p id="calc-result" class="text-3xl sm:text-4xl font-extrabold text-brand-600 mt-1">Rp 4.500.000</p>
+                        <p class="text-xs text-stone-500 mt-1">*Harga di atas adalah estimasi awal, belum termasuk survey & detail kustom.</p>
+                    </div>
+                    <button id="calc-wa-btn" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3.5 rounded-xl transition flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/20">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>Pesan Berdasarkan Hasil Ini</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri Portofolio Section -->
+    <section id="galeri" class="py-20 bg-white border-t border-stone-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-amber-500 font-bold tracking-wider text-sm uppercase mb-2">Hubungi Kami</h2>
-                <h3 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Kunjungi Bengkel Kami Atau Hubungi Langsung</h3>
-                <p class="text-slate-400 mt-3">Konsultasikan kebutuhan pengelasan atau aluminium Anda sekarang juga secara gratis.</p>
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-brand-600 font-semibold text-xs uppercase tracking-widest bg-brand-500/10 px-3 py-1 rounded-full">Portofolio Kami</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 mt-4">Hasil Karya Pengerjaan Terbaru</h2>
+                </div>
+                <div class="mt-6 md:mt-0 flex flex-wrap gap-2">
+                    <button class="filter-btn active px-4 py-2 rounded-xl text-xs font-semibold bg-brand-600 text-white transition shadow-sm" data-filter="all">Semua</button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-stone-100 text-stone-700 hover:bg-stone-200 transition" data-filter="kanopi">Kanopi</button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-stone-100 text-stone-700 hover:bg-stone-200 transition" data-filter="pagar">Pagar & Pintu</button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-stone-100 text-stone-700 hover:bg-stone-200 transition" data-filter="aluminium">Aluminium</button>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Info details -->
-                <div class="space-y-8 bg-slate-900 p-8 sm:p-10 rounded-3xl border border-slate-800">
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center text-xl shrink-0">
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
+                <!-- Item 1 -->
+                <div class="portfolio-item group relative rounded-2xl overflow-hidden aspect-square bg-stone-100 border border-stone-200 shadow-sm" data-category="kanopi">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Kanopi Minimalis" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://placehold.co/600x600/e7e5e4/b45309?text=Kanopi+Minimalis'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-xs font-semibold text-brand-500 uppercase tracking-wide">Kanopi</span>
+                        <h3 class="text-lg font-bold text-white">Kanopi Minimalis Modern</h3>
+                        <p class="text-xs text-stone-300 mt-1">Pondok Aren, Tangerang Selatan</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="portfolio-item group relative rounded-2xl overflow-hidden aspect-square bg-stone-100 border border-stone-200 shadow-sm" data-category="pagar">
+                    <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=800&q=80" alt="Pagar Besi Cutting Laser" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://placehold.co/600x600/e7e5e4/b45309?text=Pagar+Besi'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-xs font-semibold text-brand-500 uppercase tracking-wide">Pagar & Pintu</span>
+                        <h3 class="text-lg font-bold text-white">Pagar Cutting Laser CNC</h3>
+                        <p class="text-xs text-stone-300 mt-1">Bintaro, Tangerang Selatan</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="portfolio-item group relative rounded-2xl overflow-hidden aspect-square bg-stone-100 border border-stone-200 shadow-sm" data-category="aluminium">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Kusen Aluminium & Kaca" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://placehold.co/600x600/e7e5e4/b45309?text=Aluminium+Kusen'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-xs font-semibold text-brand-500 uppercase tracking-wide">Aluminium</span>
+                        <h3 class="text-lg font-bold text-white">Kusen & Pintu Jendela Aluminium</h3>
+                        <p class="text-xs text-stone-300 mt-1">BSD City, Tangerang Selatan</p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="portfolio-item group relative rounded-2xl overflow-hidden aspect-square bg-stone-100 border border-stone-200 shadow-sm" data-category="kanopi">
+                    <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" alt="Kanopi Kaca" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://placehold.co/600x600/e7e5e4/b45309?text=Kanopi+Kaca'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-xs font-semibold text-brand-500 uppercase tracking-wide">Kanopi</span>
+                        <h3 class="text-lg font-bold text-white">Kanopi Kaca Tempered Elegan</h3>
+                        <p class="text-xs text-stone-300 mt-1">Pamulang, Tangerang Selatan</p>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="portfolio-item group relative rounded-2xl overflow-hidden aspect-square bg-stone-100 border border-stone-200 shadow-sm" data-category="pagar">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Railing Tangga" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://placehold.co/600x600/e7e5e4/b45309?text=Railing+Tangga'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-xs font-semibold text-brand-500 uppercase tracking-wide">Pagar & Pintu</span>
+                        <h3 class="text-lg font-bold text-white">Railing Balkon Kaca & Besi</h3>
+                        <p class="text-xs text-stone-300 mt-1">Ciledug & Tangsel</p>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="portfolio-item group relative rounded-2xl overflow-hidden aspect-square bg-stone-100 border border-stone-200 shadow-sm" data-category="aluminium">
+                    <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800&q=80" alt="Partisi Kaca" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://placehold.co/600x600/e7e5e4/b45309?text=Partisi+Kaca'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-xs font-semibold text-brand-500 uppercase tracking-wide">Aluminium</span>
+                        <h3 class="text-lg font-bold text-white">Partisi Ruangan Kantor Aluminium</h3>
+                        <p class="text-xs text-stone-300 mt-1">Serpong, Tangerang Selatan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Kami Section -->
+    <section id="tentang" class="py-20 bg-stone-50 relative overflow-hidden border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-brand-600 font-semibold text-xs uppercase tracking-widest bg-brand-500/10 px-3 py-1 rounded-full">Tentang CV. Manunggal Logam</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900">Bengkel Las & Fabrikasi Aluminium Terpercaya di Pondok Aren</h2>
+                    <p class="text-stone-700 text-sm sm:text-base leading-relaxed">
+                        CV. Manunggal Logam adalah penyedia jasa pengelasan besi, baja, dan fabrikasi aluminium profesional yang berlokasi di jantung Kota Tangerang Selatan. Kami mengutamakan ketepatan waktu, kerapihan detail pengerjaan las, serta penggunaan material berkualitas tinggi bersertifikasi SNI.
+                    </p>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        Baik untuk renovasi rumah tinggal, pembangunan ruko, cluster perumahan, maupun proyek komersial, tim tukang ahli kami siap memberikan hasil kerja terbaik yang kokoh, estetis, dan bergaransi.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 pt-4">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-brand-500/10 flex items-center justify-center text-brand-600 flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-shield-halved text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-stone-900 font-semibold text-sm">Garansi Resmi</h4>
+                                <p class="text-xs text-stone-500 mt-1">Jaminan kualitas struktur & las kuat.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-brand-500/10 flex items-center justify-center text-brand-600 flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-handshake-simple text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-stone-900 font-semibold text-sm">Survey Gratis</h4>
+                                <p class="text-xs text-stone-500 mt-1">Pengukuran langsung ke lokasi Anda.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-6">
+                    <div class="bg-white border border-stone-200 rounded-3xl p-8 shadow-xl space-y-6 relative">
+                        <h3 class="text-xl font-bold text-stone-900 border-b border-stone-200 pb-4">Kenapa Memilih Kami?</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">✓</div>
+                                <p class="text-sm text-stone-700">Tenaga ahli las berpengalaman belasan tahun.</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">✓</div>
+                                <p class="text-sm text-stone-700">Material besi/baja SNI & aluminium grade A (YKK/Alexindo).</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">✓</div>
+                                <p class="text-sm text-stone-700">Harga transparan dan kompetitif tanpa biaya tersembunyi.</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">✓</div>
+                                <p class="text-sm text-stone-700">Pelayanan ramah, responsif, dan tepat waktu.</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/6287808813777?text=Halo,%20saya%20ingin%20jadwalkan%20survey%20lokasi" target="_blank"
+                           class="w-full block text-center bg-gradient-to-r from-brand-600 to-amber-700 text-white font-bold py-3.5 rounded-xl transition shadow-lg shadow-brand-600/20">
+                            Jadwalkan Survey Sekarang
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak & Lokasi Section -->
+    <section id="kontak" class="py-20 bg-white border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-brand-600 font-semibold text-xs uppercase tracking-widest bg-brand-500/10 px-3 py-1 rounded-full">Hubungi Kami</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 mt-4 mb-3">Kunjungi Workshop Kami atau Hubungi Langsung</h2>
+                <p class="text-stone-600 text-sm">Kami siap melayani konsultasi pengerjaan las dan aluminium untuk wilayah Tangerang Selatan dan Jabodetabek.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- Info Cards -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-stone-50 border border-stone-200 rounded-2xl p-6 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-600 flex items-center justify-center text-xl flex-shrink-0">
                             <i class="fa-solid fa-location-dot"></i>
                         </div>
                         <div>
-                            <h4 class="font-bold text-lg mb-1">Alamat Workshop</h4>
-                            <p class="text-slate-400 text-sm leading-relaxed">
+                            <h4 class="text-stone-900 font-semibold mb-1">Alamat Workshop</h4>
+                            <p class="text-stone-600 text-sm leading-relaxed">
                                 Jl. Manunggal VIII No.124b, RT.002/RW.008, Pd. Aren, Kec. Pd. Aren, Kota Tangerang Selatan, Banten 15224
                             </p>
                         </div>
                     </div>
 
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center text-xl shrink-0">
+                    <div class="bg-stone-50 border border-stone-200 rounded-2xl p-6 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-600 flex items-center justify-center text-xl flex-shrink-0">
                             <i class="fa-solid fa-phone"></i>
                         </div>
                         <div>
-                            <h4 class="font-bold text-lg mb-1">Telepon / WhatsApp</h4>
-                            <p class="text-slate-400 text-sm">0878-0881-3777</p>
+                            <h4 class="text-stone-900 font-semibold mb-1">Telepon / WhatsApp</h4>
+                            <p class="text-stone-600 text-sm">0878-0881-3777 (Aktif 24/7)</p>
+                            <a href="https://wa.me/6287808813777?text=Halo%20CV.%20Manunggal%20Logam" target="_blank" class="inline-flex items-center gap-2 text-emerald-600 text-xs font-semibold mt-2 hover:underline">
+                                <i class="fa-brands fa-whatsapp"></i> Chat Langsung via WhatsApp &rarr;
+                            </a>
                         </div>
                     </div>
 
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center text-xl shrink-0">
+                    <div class="bg-stone-50 border border-stone-200 rounded-2xl p-6 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-600 flex items-center justify-center text-xl flex-shrink-0">
                             <i class="fa-solid fa-clock"></i>
                         </div>
                         <div>
-                            <h4 class="font-bold text-lg mb-1">Jam Operasional</h4>
-                            <p class="text-slate-400 text-sm">Senin - Sabtu: 08.00 - 17.00 WIB<br>Minggu: Dengan Perjanjian</p>
+                            <h4 class="text-stone-900 font-semibold mb-1">Jam Operasional</h4>
+                            <p class="text-stone-600 text-sm">Senin - Sabtu: 08.00 - 17.00 WIB</p>
+                            <p class="text-stone-500 text-xs mt-1">Minggu & Hari Libur: By Appointment</p>
                         </div>
-                    </div>
-
-                    <div class="pt-4">
-                        <a href="https://wa.me/6287808813777" target="_blank" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-4 rounded-xl transition flex items-center justify-center gap-3 shadow-lg shadow-amber-500/20">
-                            <i class="fa-brands fa-whatsapp text-xl"></i> Chat via WhatsApp Sekarang
-                        </a>
                     </div>
                 </div>
 
                 <!-- Google Maps Embed -->
-                <div class="h-[450px] w-full rounded-3xl overflow-hidden border border-slate-800 shadow-xl">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.059296530669!2d106.7088031!3d-6.2570001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fa74c3912193%3A0x6b19a3b6807f6e07!2sJl.%20Manunggal%20VIII%20No.124b%2C%20RT.002%2FRW.008%2C%20Pd.%20Aren%2C%20Kec.%20Pd.%20Aren%2C%20Kota%20Tangerang%20Selatan%2C%20Banten%2015224!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
-                        width="100%" 
-                        height="100%" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                <div class="lg:col-span-7">
+                    <div class="bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden p-2 shadow-xl">
+                        <div class="w-full h-[400px] rounded-xl overflow-hidden">
+                            <iframe 
+                                width="100%" 
+                                height="100%" 
+                                frameborder="0" 
+                                scrolling="no" 
+                                marginheight="0" 
+                                marginwidth="0" 
+                                src="https://maps.google.com/maps?q=Jl.+Manunggal+VIII+No.124b,+Pd.+Aren,+Kec.+Pd.+Aren,+Kota+Tangerang+Selatan,+Banten+15224&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-slate-950 border-t border-slate-800 py-8 text-center text-slate-500 text-sm">
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-300 py-12 text-sm border-t border-stone-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p>&copy; 2026 Bengkel Manunggal Logam. Hak Cipta Dilindungi.</p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-brand-600 flex items-center justify-center text-white font-bold text-lg">
+                            <i class="fa-solid fa-hammer"></i>
+                        </div>
+                        <div>
+                            <span class="text-white font-bold tracking-tight block">CV. MANUNGGAL LOGAM</span>
+                            <span class="text-xs text-brand-500 font-medium">Spesialis Las & Aluminium Tangsel</span>
+                        </div>
+                    </div>
+                    <p class="text-xs sm:text-sm text-stone-400 max-w-md leading-relaxed">
+                        Solusi terbaik untuk pembuatan kanopi aesthetic, pagar minimalis, tangga putar, mebel industrial, serta kusen dan partisi aluminium di Pondok Aren dan sekitarnya.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4">Navigasi Cepat</h4>
+                    <ul class="space-y-2 text-xs text-stone-400">
+                        <li><a href="#beranda" class="hover:text-brand-500 transition">Beranda</a></li>
+                        <li><a href="#layanan" class="hover:text-brand-500 transition">Layanan & Produk</a></li>
+                        <li><a href="#kalkulator" class="hover:text-brand-500 transition">Estimator Harga</a></li>
+                        <li><a href="#galeri" class="hover:text-brand-500 transition">Portofolio Galeri</a></li>
+                        <li><a href="#tentang" class="hover:text-brand-500 transition">Tentang Kami</a></li>
+                        <li><a href="#kontak" class="hover:text-brand-500 transition">Kontak & Lokasi</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4">Layanan Utama</h4>
+                    <ul class="space-y-2 text-xs text-stone-400">
+                        <li>Kanopi Minimalis & Kaca</li>
+                        <li>Pagar & Gerbang Cutting Laser</li>
+                        <li>Tangga Melayang & Railing</li>
+                        <li>Kusen & Pintu Aluminium</li>
+                        <li>Mebel Industrial Besi</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
+                <p>&copy; 2026 CV. Manunggal Logam. All rights reserved.</p>
+                <p>Jl. Manunggal VIII No.124b, Pondok Aren, Tangerang Selatan</p>
+            </div>
         </div>
     </footer>
 
+    <!-- JavaScript Logic -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking links
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Interactive Cost Calculator
+        const calcService = document.getElementById('calc-service');
+        const calcVolume = document.getElementById('calc-volume');
+        const calcResult = document.getElementById('calc-result');
+        const calcWaBtn = document.getElementById('calc-wa-btn');
+
+        function updateCalculator() {
+            const selectedOption = calcService.options[calcService.selectedIndex];
+            const basePrice = parseFloat(selectedOption.getAttribute('data-price'));
+            const volume = parseFloat(calcVolume.value) || 0;
+            const total = basePrice * volume;
+
+            calcResult.textContent = new Intl.NumberFormat('id-ID', {
+                style: 'currency',
+                currency: 'IDR',
+                maximumFractionDigits: 0
+            }).format(total);
+
+            // Update WhatsApp message
+            const serviceName = selectedOption.text;
+            const waMessage = `Halo%20CV.%20Manunggal%20Logam,%20saya%20ingin%20memesan%20${encodeURIComponent(serviceName)}%20dengan%20volume%20sekitar%20${volume}%20unit/m²%20(Estimasi%20total:%20${encodeURIComponent(calcResult.textContent)}).%20Mohon%20info%20lanjut.`;
+            calcWaBtn.setAttribute('href', `https://wa.me/6287808813777?text=${waMessage}`);
+        }
+
+        calcService.addEventListener('change', updateCalculator);
+        calcVolume.addEventListener('input', updateCalculator);
+        updateCalculator(); // Initialize on load
+
+        // Portfolio Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-brand-600', 'text-white', 'shadow-sm');
+                    b.classList.add('bg-stone-100', 'text-stone-700');
+                });
+                // Add active to clicked
+                btn.classList.add('bg-brand-600', 'text-white', 'shadow-sm');
+                btn.classList.remove('bg-stone-100', 'text-stone-700');
+
+                const filter = btn.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
