@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bengkel Manunggal Logam | Spesialis Besi, Baja, & Kusen Aluminium</title>
+    <title>Bengkel Manunggal Logam | Spesialis Besi, Baja, & Aluminium</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Plus Jakarta Sans -->
@@ -38,7 +38,7 @@
                 <div class="bg-amber-500 text-slate-950 p-2 rounded-lg font-extrabold text-xl">
                     <i class="fa-solid fa-fire-flame-curved"></i>
                 </div>
-                <span class="text-lg sm:text-xl font-extrabold tracking-tight">MANUNGGAL<span class="text-amber-500">LOGAM</span></span>
+                <span class="text-xl font-extrabold tracking-tight">MANUNGGAL<span class="text-amber-500">LOGAM</span></span>
             </a>
             <div class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-300">
                 <a href="#home" class="hover:text-amber-500 transition">Beranda</a>
@@ -62,13 +62,13 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-3xl mx-auto">
                 <span class="inline-flex items-center gap-1.5 py-1.5 px-4 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-6">
-                    <i class="fa-solid fa-award"></i> Bengkel Manunggal Logam - Spesialis Besi, Baja, & Aluminium
+                    <i class="fa-solid fa-award"></i> Spesialis Besi, Baja, & Aluminium Berkualitas Tinggi
                 </span>
                 <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
                     Solusi Estetik & Kokoh Untuk <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">Hunian & Gedung Anda</span>
                 </h1>
                 <p class="text-slate-400 text-base sm:text-lg mb-10 leading-relaxed">
-                    Kami melayani pembuatan kanopi modern, pagar minimalis, tangga, mebel industrial, hingga kusen, pintu, jendela, dan partisi aluminium dengan hasil presisi dan bergaransi rapi.
+                    Selamat datang di <strong>Bengkel Manunggal Logam</strong>. Kami melayani pembuatan kanopi modern, pagar minimalis, tangga, mebel industrial, hingga kusen, pintu, jendela, dan partisi aluminium dengan hasil presisi dan bergaransi rapi.
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a href="https://wa.me/6287808813777" target="_blank" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-8 py-4 rounded-xl transition shadow-xl shadow-amber-500/20 flex items-center justify-center gap-3 text-base">
@@ -87,10 +87,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-amber-500 font-bold tracking-wider text-sm uppercase mb-2">Tentang Kami</h2>
-                    <h3 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-6">Keahlian Menyatukan Kekuatan Besi & Keindahan Aluminium</h3>
+                    <h2 class="text-amber-500 font-bold tracking-wider text-sm uppercase mb-2">Tentang Bengkel Kami</h2>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-6">Bengkel Manunggal Logam: Keahlian Menyatukan Kekuatan Besi & Keindahan Aluminium</h3>
                     <p class="text-slate-400 leading-relaxed mb-6">
-                        <strong>Bengkel Manunggal Logam</strong> adalah bengkel profesional yang berfokus pada pengerjaan konstruksi besi, baja, serta instalasi aluminium di Tangerang Selatan. Dengan pengalaman bertahun-tahun, kami siap mewujudkan berbagai desain impian Anda—baik gaya industrial modern, minimalis kontemporer, maupun klasik.
+                        Kami adalah bengkel profesional yang berfokus pada pengerjaan konstruksi besi, baja, serta instalasi aluminium di Tangerang Selatan. Dengan pengalaman bertahun-tahun, kami siap mewujudkan berbagai desain impian Anda—baik gaya industrial modern, minimalis kontemporer, hingga klasik.
                     </p>
                     <div class="grid grid-cols-2 gap-6 pt-4 border-t border-slate-800">
                         <div>
@@ -108,7 +108,7 @@
                         Terpercaya & Bergaransi
                     </div>
                     <h4 class="text-xl font-bold mb-4 flex items-center gap-3">
-                        <i class="fa-solid fa-circle-check text-amber-500"></i> Kenapa Memilih Manunggal Logam?
+                        <i class="fa-solid fa-circle-check text-amber-500"></i> Kenapa Memilih Kami?
                     </h4>
                     <ul class="space-y-4 text-slate-300">
                         <li class="flex items-start gap-3">
