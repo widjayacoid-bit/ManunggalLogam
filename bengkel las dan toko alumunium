@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bengkel Manunggal Logam | Spesialis Besi, Baja, & Kusen Aluminium</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        industrial: {
+                            dark: '#0f172a',
+                            card: '#1e293b',
+                            accent: '#f59e0b', // Amber/Welding spark accent
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-slate-950">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2">
+                <div class="bg-amber-500 text-slate-950 p-2 rounded-lg font-extrabold text-xl">
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                </div>
+                <span class="text-lg sm:text-xl font-extrabold tracking-tight">MANUNGGAL<span class="text-amber-500">LOGAM</span></span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-300">
+                <a href="#home" class="hover:text-amber-500 transition">Beranda</a>
+                <a href="#about" class="hover:text-amber-500 transition">Tentang Kami</a>
+                <a href="#services" class="hover:text-amber-500 transition">Layanan</a>
+                <a href="#contact" class="hover:text-amber-500 transition">Kontak</a>
+            </div>
+            <div>
+                <a href="https://wa.me/6287808813777" target="_blank" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-5 py-2.5 rounded-full text-sm transition shadow-lg shadow-amber-500/20 flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Hubungi Kami
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden border-b border-slate-800">
+        <!-- Background Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="inline-flex items-center gap-1.5 py-1.5 px-4 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-6">
+                    <i class="fa-solid fa-award"></i> Bengkel Manunggal Logam - Spesialis Besi, Baja, & Aluminium
+                </span>
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                    Solusi Estetik & Kokoh Untuk <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">Hunian & Gedung Anda</span>
+                </h1>
+                <p class="text-slate-400 text-base sm:text-lg mb-10 leading-relaxed">
+                    Kami melayani pembuatan kanopi modern, pagar minimalis, tangga, mebel industrial, hingga kusen, pintu, jendela, dan partisi aluminium dengan hasil presisi dan bergaransi rapi.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="https://wa.me/6287808813777" target="_blank" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-8 py-4 rounded-xl transition shadow-xl shadow-amber-500/20 flex items-center justify-center gap-3 text-base">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> Konsultasi Gratis Sekarang
+                    </a>
+                    <a href="#services" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 font-semibold px-8 py-4 rounded-xl transition flex items-center justify-center gap-2 text-base">
+                        Lihat Layanan Kami <i class="fa-solid fa-arrow-down text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-amber-500 font-bold tracking-wider text-sm uppercase mb-2">Tentang Kami</h2>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-6">Keahlian Menyatukan Kekuatan Besi & Keindahan Aluminium</h3>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        <strong>Bengkel Manunggal Logam</strong> adalah bengkel profesional yang berfokus pada pengerjaan konstruksi besi, baja, serta instalasi aluminium di Tangerang Selatan. Dengan pengalaman bertahun-tahun, kami siap mewujudkan berbagai desain impian Anda—baik gaya industrial modern, minimalis kontemporer, maupun klasik.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 pt-4 border-t border-slate-800">
+                        <div>
+                            <span class="block text-3xl font-extrabold text-amber-500 mb-1">100%</span>
+                            <span class="text-sm text-slate-400 font-medium">Material Berkualitas Tinggi</span>
+                        </div>
+                        <div>
+                            <span class="block text-3xl font-extrabold text-amber-500 mb-1">Rapi & Presisi</span>
+                            <span class="text-sm text-slate-400 font-medium">Dikerjakan Tenaga Ahli</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-900 p-8 rounded-3xl border border-slate-800 relative">
+                    <div class="absolute -top-4 -right-4 bg-amber-500 text-slate-950 font-bold px-4 py-2 rounded-xl text-sm shadow-lg">
+                        Terpercaya & Bergaransi
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-amber-500"></i> Kenapa Memilih Manunggal Logam?
+                    </h4>
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-amber-500 mt-1"></i>
+                            <span>Desain fleksibel dan dapat disesuaikan (custom) dengan konsep bangunan Anda.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-amber-500 mt-1"></i>
+                            <span>Menggunakan bahan baku besi/baja tebal serta profil aluminium pilihan tahan karat.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-amber-500 mt-1"></i>
+                            <span>Harga kompetitif, transparan, dan transaksional tanpa biaya tersembunyi.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-amber-500 mt-1"></i>
+                            <span>Pelayanan ramah, survei lokasi, dan konsultasi gratis langsung ke tempat Anda.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-amber-500 font-bold tracking-wider text-sm uppercase mb-2">Layanan Kami</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Produk & Jasa Unggulan</h3>
+                <p class="text-slate-400 mt-3">Berbagai macam kebutuhan pengelasan besi/baja serta pengerjaan aluminium siap kami kerjakan.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-amber-500/50 transition group">
+                    <div class="w-14 h-14 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
+                        <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Kanopi Modern</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Pembuatan kanopi kaca, alderon, spandek, solarlite dengan rangka besi hollow minimalis atau baja ringan yang kuat.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-amber-500/50 transition group">
+                    <div class="w-14 h-14 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Pagar & Palingan</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Pagar minimalis, laser cutting, pagar kayu plat besi, railing balkon, dan tralis jendela yang aman sekaligus estetik.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-amber-500/50 transition group">
+                    <div class="w-14 h-14 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
+                        <i class="fa-solid fa-stairs"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Tangga Besi & Baja</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Tangga lurus, tangga putar, tangga melayang (floating stairs) yang kokoh dipadukan dengan sentuhan modern.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-amber-500/50 transition group">
+                    <div class="w-14 h-14 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
+                        <i class="fa-solid fa-couch"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Mebel & Rak Industrial</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Meja, kursi, rak buku, dan partisi ruangan dengan gaya industrial memadukan rangka besi dan kayu pilihan.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-amber-500/50 transition group">
+                    <div class="w-14 h-14 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
+                        <i class="fa-solid fa-door-open"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Pintu & Kusen Aluminium</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Pembuatan kusen pintu & jendela aluminium (YKK, Alexindo, dll), pintu lipat, pintu geser (sliding), dan swing door.</p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-amber-500/50 transition group">
+                    <div class="w-14 h-14 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
+                        <i class="fa-solid fa-window-maximize"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Jendela & Partisi Kaca</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Jendela casement, jendela nako, serta partisi kaca tempered untuk kantor, ruko, maupun hunian modern.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & LOCATION SECTION -->
+    <section id="contact" class="py-24 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-amber-500 font-bold tracking-wider text-sm uppercase mb-2">Hubungi Kami</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Kunjungi Bengkel Kami Atau Hubungi Langsung</h3>
+                <p class="text-slate-400 mt-3">Konsultasikan kebutuhan pengelasan atau aluminium Anda sekarang juga secara gratis.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Info details -->
+                <div class="space-y-8 bg-slate-900 p-8 sm:p-10 rounded-3xl border border-slate-800">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">Alamat Workshop</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Jl. Manunggal VIII No.124b, RT.002/RW.008, Pd. Aren, Kec. Pd. Aren, Kota Tangerang Selatan, Banten 15224
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">Telepon / WhatsApp</h4>
+                            <p class="text-slate-400 text-sm">0878-0881-3777</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">Jam Operasional</h4>
+                            <p class="text-slate-400 text-sm">Senin - Sabtu: 08.00 - 17.00 WIB<br>Minggu: Dengan Perjanjian</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="https://wa.me/6287808813777" target="_blank" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-4 rounded-xl transition flex items-center justify-center gap-3 shadow-lg shadow-amber-500/20">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Chat via WhatsApp Sekarang
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed -->
+                <div class="h-[450px] w-full rounded-3xl overflow-hidden border border-slate-800 shadow-xl">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.059296530669!2d106.7088031!3d-6.2570001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fa74c3912193%3A0x6b19a3b6807f6e07!2sJl.%20Manunggal%20VIII%20No.124b%2C%20RT.002%2FRW.008%2C%20Pd.%20Aren%2C%20Kec.%20Pd.%20Aren%2C%20Kota%20Tangerang%20Selatan%2C%20Banten%2015224!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-8 text-center text-slate-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p>&copy; 2026 Bengkel Manunggal Logam. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
